@@ -1,0 +1,77 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="master_admin.master.cs" Inherits="adminpanel_master_admin" %>
+
+
+
+
+
+
+
+<%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="asp" %>
+
+
+
+
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="Stil_yonetim.css" rel="stylesheet" />
+    <link href="bootcss/bootstrap.css" rel="stylesheet" />
+    <link href="bootcss/bootstrap.min.css" rel="stylesheet" />
+    <link href="bootcss/bootstrap-theme.css" rel="stylesheet" />
+    <script src="bootjs/bootstrap.min.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="dis_alan">
+            <div id="banner">Pak Profil Yönetim Paneli
+                
+               
+                    
+                    <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
+                    </asp:ToolkitScriptManager>
+                    
+                
+
+                
+
+
+            </div>
+            <div id="navigasyon">
+                <div id="adsoyad">Ad Soyad:Mahmut Yıldız</div>
+                <div id="gorev">Gorevi: Yönetici</div>
+            </div>
+            <div id="icerik_alani">
+                <div id="butonlar">
+                    <ul>
+
+                        <li><a href="AdminYonetimi.aspx">Admin Yönetimi </a></li>
+                        <li><a href="MusteriEkle.aspx">Müşteri Ekle </a></li>
+                        <li><a href="musteriGor.aspx">Müşterileri Gör </a></li>
+                        <li><a href="KategoriEkle.aspx">Kategori Ekle </a></li>
+                        <li><a href="UrunEkle.aspx">Ürün Ekle </a></li>
+                        
+                    </ul>
+                </div>
+                <div id="icerik">
+
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+
+                </div>
+
+            </div>
+              <div style="font-family: 'Trebuchet MS'; float:left; font-size: 17px; font-weight: bold; color: #FFFFFF; text-align: center; line-height:50px; background-color: #990033; margin-top: 20px; width: 1000px; height: 50px">Bu Admin Paneli Mahmut Yıldız Tarafından Yapılmıştır...</div>
+
+        </div>
+      
+
+    </form>
+</body>
+</html>
