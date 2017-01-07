@@ -1,0 +1,128 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Kullanici.master.cs" Inherits="Kullanici" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/camera.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-migrate-1.2.1.js"></script>
+    <script src='js/camera.js'></script>
+    <script src="js/owl.carousel.js"></script>
+    <script src="js/jquery.stellar.js"></script>
+    <script src="js/script.js"></script>
+    <!--[if (gt IE 9)|!(IE)]><!-->
+    <script src="js/jquery.mobile.customized.min.js"></script>
+    <script src="js/wow.js"></script>
+    <script>
+        $(document).ready(function () {
+            if ($('html').hasClass('desktop')) {
+                new WOW().init();
+            }
+        });
+    </script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="index">
+    <!--==============================header=================================-->
+    <header id="header">
+        <div id="stuck_container">
+            <div class="container">
+                <div class="row">
+                    <div class="grid_12">
+                        <h1><a href="index.html">PAK PROFİL</a><span>İnşaat Malzemeleri</span></h1>
+                        <nav>
+                            <ul class="sf-menu">
+                                <li class="current"><a href="Default.aspx">Anasayfa</a>
+
+                                </li>
+                                <li><a href="Hakkinda.aspx">Hakkında</a></li>
+                                <li><a href="Referanslar.aspx">Referanslar</a></li>
+                                <li><a href="Urunler.aspx">Ürünler</a></li>
+                                <li><a href="iletisim.aspx">İletişim</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+
+
+    <!--=======footer=================================-->
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="grid_12 copyright">
+                    <h2><span>Follow Us</span></h2>
+                    <a href="#" class="btn bd-ra"><span class="fa fa-facebook"></span></a>
+                    <a href="#" class="btn bd-ra"><span class="fa fa-tumblr"></span></a>
+                    <a href="#" class="btn bd-ra"><span class="fa fa-google-plus"></span></a>
+                    <pre>© <span id="copyright-year"></span> |  Privacy Policy</pre>
+                    More <a rel="nofollow" href="http://www.templatemonster.com/category/advertising-agency-website-templates/" target="_blank">Advertising Agency Website Templates at TemplateMonster.com</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer_bottom">
+            <a href="http://www.templatemonster.com/" rel="nofollow">
+                <img src="images/footer-logo.png" alt="logo"></a>
+        </div>
+    </footer>
+    <script>
+        jQuery(function () {
+            jQuery('#camera_wrap').camera({
+                height: '34.58333333333333%',
+                thumbnails: false,
+                pagination: true,
+                fx: 'simpleFade',
+                loader: 'none',
+                hover: false,
+                navigation: false,
+                playPause: false,
+                minHeight: "139px",
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $(".owl-carousel").owlCarousel({
+                navigation: true,
+                pagination: false,
+                items: 3,
+                itemsDesktop: [1199, 3],
+                itemsDesktopSmall: [979, 3],
+                itemsTablet: [750, 1],
+                itemsMobile: [479, 1],
+                navigationText: false
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            if ($('html').hasClass('desktop')) {
+                $.stellar({
+                    horizontalScrolling: false,
+                    verticalOffset: 20,
+                    resposive: true,
+                    hideDistantElements: true,
+                });
+            }
+        });
+    </script>
+</body>
+</html>
